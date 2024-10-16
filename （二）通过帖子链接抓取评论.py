@@ -1,5 +1,5 @@
 import lxml.html,requests
-import time
+import time,random
 from bs4 import BeautifulSoup,Comment
 
 def get_comment_link():                     #对'湖北工业大学吧帖子爬取.txt'进行清洗，摘取所有的链接，encoding=utf-8
@@ -47,7 +47,7 @@ def all_two(comment_list):
     for i,comment in enumerate(comment_list,start=1):
         write_Info_comment(comment)
         print("第"+str(i)+"个帖子打印完成")
-        time.sleep(1)
+        time.sleep(1 + random.random())
 
 
 # with open("湖工大吧评论.txt","r",encoding="utf-8") as f:

@@ -1,5 +1,5 @@
 import lxml.html,requests
-import time
+import time,random
 from bs4 import BeautifulSoup,Comment
 
 def get_HTMLText(url):      #去掉注释符号，抓取HTML代码。
@@ -69,7 +69,7 @@ def all_one():
         informations = get_Info(get_HTMLText(url))
         write_Info_link(informations)
         print("第"+str(i)+"页打印完成!")
-        time.sleep(1)
+        time.sleep(1 + random.random())
 
 all_one()
 
